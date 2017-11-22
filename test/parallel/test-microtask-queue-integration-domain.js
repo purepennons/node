@@ -30,6 +30,8 @@ const assert = require('assert');
 // removed.
 require('domain');
 
+common.crashOnUnhandledRejection();
+
 const implementations = [
   function(fn) {
     Promise.resolve().then(fn);
